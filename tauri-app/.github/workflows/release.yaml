@@ -2,9 +2,7 @@ name: Publish Release
 
 on:
   push:
-    branches:
-      # replace with your release branch, usually `main`.
-      - main
+    branches: main
   workflow_dispatch:
     inputs:
       app-slug:
