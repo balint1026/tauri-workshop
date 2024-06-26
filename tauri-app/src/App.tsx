@@ -5,6 +5,7 @@ import "./App.css";
 // import { ask } from "@tauri-apps/plugin-dialog";
 import { locale, platform } from "@tauri-apps/plugin-os";
 import { isPermissionGranted, requestPermission, sendNotification } from "@tauri-apps/plugin-notification";
+import { checkForAppUpdates } from "./updater";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -45,8 +46,7 @@ function App() {
      }
 
      setSystem();
-     
-
+     checkForAppUpdates();
   },[])
 
   return (
